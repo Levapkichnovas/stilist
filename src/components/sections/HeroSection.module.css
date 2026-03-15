@@ -40,8 +40,12 @@
 
 .title {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.3em;
+  flex-direction: column;
+  gap: 0;
+}
+
+.wordWrap {
+  overflow: hidden;
 }
 
 .word {
@@ -49,8 +53,8 @@
   font-size: var(--fs-hero);
   font-weight: 700;
   color: var(--color-white);
-  line-height: 1;
-  display: inline-block;
+  line-height: 1.1;
+  display: block;
 }
 
 .subtitle {
@@ -58,6 +62,19 @@
   color: var(--color-gray);
   max-width: 480px;
   line-height: 1.7;
+}
+
+.pulseBtn a {
+  animation: pulse 0.8s ease-in-out 2.2s 1;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(197, 162, 88, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 20px 8px rgba(197, 162, 88, 0.3);
+  }
 }
 
 .photoSide {

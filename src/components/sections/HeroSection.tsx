@@ -21,15 +21,20 @@ export function HeroSection() {
           </motion.p>
           <h1 className={styles.title}>
             {words.map((word, i) => (
-              <motion.span
-                key={i}
-                className={styles.word}
-                initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 + i * 0.12 }}
-              >
-                {word}
-              </motion.span>
+              <div key={i} className={styles.wordWrap}>
+                <motion.span
+                  className={styles.word}
+                  initial={{ opacity: 0, x: i % 2 === 0 ? -120 : 120 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{
+                    duration: 0.8,
+                    delay: 0.4 + i * 0.2,
+                    ease: [0.25, 0.46, 0.45, 0.94],
+                  }}
+                >
+                  {word}
+                </motion.span>
+              </div>
             ))}
           </h1>
           <motion.p
@@ -41,6 +46,7 @@ export function HeroSection() {
             Помогу через стиль обрести себя, чтобы быть в гармонии со своим «Я»
           </motion.p>
           <motion.div
+            className={styles.pulseBtn}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.3 }}
