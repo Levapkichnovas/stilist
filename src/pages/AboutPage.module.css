@@ -1,0 +1,162 @@
+.hero {
+  position: relative;
+  padding-top: calc(var(--header-height) + var(--space-xl));
+  padding-bottom: var(--space-xl);
+  background-color: var(--color-gray-dark);
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(197, 162, 88, 0.06) 0%, transparent 60%);
+}
+
+.heroContent {
+  position: relative;
+  text-align: center;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-white);
+}
+
+.bio {
+  padding: var(--space-section) 0;
+  background-color: var(--color-black);
+}
+
+.bioGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.bioPhoto {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.photoPlaceholder {
+  width: 300px;
+  height: 400px;
+  background: linear-gradient(135deg, var(--color-gray-dark) 0%, var(--color-black) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.photoInitial {
+  font-family: var(--font-display);
+  font-size: 8rem;
+  color: var(--color-gold);
+  opacity: 0.15;
+}
+
+.photoFrame {
+  position: absolute;
+  top: 15px;
+  left: calc(50% - 135px);
+  width: 300px;
+  height: 400px;
+  border: 1px solid var(--color-gold);
+  opacity: 0.3;
+}
+
+.bioText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.bioName {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.bioRole {
+  font-size: var(--fs-small);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+}
+
+.bioParagraph {
+  color: var(--color-gray);
+  line-height: 1.8;
+}
+
+.approach {
+  padding: var(--space-section) 0;
+  background-color: var(--color-gray-dark);
+}
+
+.approachContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.approachTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.approachGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.approachBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.pullQuote {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-style: italic;
+  color: var(--color-white);
+  line-height: 1.4;
+}
+
+.goldText {
+  color: var(--color-gold);
+  font-weight: 600;
+  font-style: normal;
+}
+
+.approachText {
+  color: var(--color-gray);
+  line-height: 1.8;
+}
+
+@media (min-width: 768px) {
+  .bioGrid {
+    grid-template-columns: 1fr 1.2fr;
+  }
+
+  .approachGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

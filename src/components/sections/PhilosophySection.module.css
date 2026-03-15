@@ -1,0 +1,23 @@
+.section {
+  padding: var(--space-section) 0;
+  background-color: var(--color-black);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+
+  .grid > *:nth-child(even) {
+    transform: translateY(2rem);
+  }
+}

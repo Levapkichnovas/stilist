@@ -1,0 +1,49 @@
+.banner {
+  position: relative;
+  background-color: var(--color-gray-dark);
+  padding: var(--space-lg);
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.text {
+  color: var(--color-gray);
+  margin-bottom: var(--space-md);
+  line-height: 1.7;
+}
+
+.decorLine {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  border-left: 2px solid var(--color-gold);
+  opacity: 0.15;
+  transform: skewX(-10deg);
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: var(--space-md);
+  }
+
+  .decorLine {
+    display: none;
+  }
+}

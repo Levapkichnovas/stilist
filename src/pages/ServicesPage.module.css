@@ -1,0 +1,75 @@
+.hero {
+  padding-top: calc(var(--header-height) + var(--space-xl));
+  padding-bottom: var(--space-lg);
+  background-color: var(--color-black);
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-white);
+  margin-bottom: var(--space-sm);
+}
+
+.subtitle {
+  color: var(--color-gray);
+  font-size: var(--fs-body);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.servicesSection {
+  padding: var(--space-lg) 0;
+  background-color: var(--color-black);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.giftSection {
+  padding: var(--space-lg) 0;
+  background-color: var(--color-black);
+}
+
+.prepayment {
+  padding: var(--space-md) 0 var(--space-lg);
+  background-color: var(--color-black);
+}
+
+.prepaymentText {
+  text-align: center;
+  color: var(--color-gray);
+  font-size: var(--fs-small);
+  font-style: italic;
+  border-top: 1px solid rgba(197, 162, 88, 0.1);
+  padding-top: var(--space-md);
+}
+
+.faqSection {
+  padding: var(--space-section) 0;
+  background-color: var(--color-gray-dark);
+}
+
+.faqList {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

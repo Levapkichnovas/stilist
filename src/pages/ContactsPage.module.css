@@ -1,0 +1,157 @@
+.hero {
+  padding-top: calc(var(--header-height) + var(--space-xl));
+  padding-bottom: var(--space-lg);
+  background-color: var(--color-black);
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-white);
+}
+
+.cardsSection {
+  padding: var(--space-lg) 0;
+  background-color: var(--color-black);
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg) var(--space-md);
+  background-color: var(--color-gray-dark);
+  border: 1px solid transparent;
+  text-decoration: none;
+  text-align: center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cardIcon {
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-black);
+  background-color: var(--color-gold);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  letter-spacing: 0;
+}
+
+.cardName {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.cardValue {
+  font-size: var(--fs-small);
+  color: var(--color-gray);
+}
+
+.consultation {
+  padding: var(--space-section) 0;
+  background-color: var(--color-gray-dark);
+}
+
+.consultationContent {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.consultationTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.consultationText {
+  color: var(--color-gray);
+  line-height: 1.8;
+}
+
+.consultationDetails {
+  display: flex;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.detailLabel {
+  font-size: var(--fs-small);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-gray);
+}
+
+.detailValue {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.location {
+  padding: var(--space-lg) 0;
+  background-color: var(--color-black);
+}
+
+.locationContent {
+  text-align: center;
+}
+
+.locationCity {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: var(--space-sm);
+}
+
+.locationNote {
+  color: var(--color-gray);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  .cardsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
