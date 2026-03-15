@@ -1,6 +1,7 @@
 import { motion } from 'motion/react'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
 import { CTASection } from '@/components/sections/CTASection'
+import aboutImg from '@/assets/images/2.jpg'
 import styles from './AboutPage.module.css'
 
 export function AboutPage() {
@@ -36,9 +37,7 @@ export function AboutPage() {
             animate={bioInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7 }}
           >
-            <div className={styles.photoPlaceholder}>
-              <span className={styles.photoInitial}>Ж</span>
-            </div>
+            <img src={aboutImg} alt="Жамьяна Хатуева" className={styles.photoImage} />
             <div className={styles.photoFrame} />
           </motion.div>
           <motion.div
