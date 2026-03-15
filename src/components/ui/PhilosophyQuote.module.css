@@ -1,17 +1,17 @@
 .quote {
   position: relative;
-  padding: var(--space-md) var(--space-lg);
+  padding: var(--space-md) 0;
+  padding-left: var(--space-md);
+  border-left: 2px solid var(--color-gold);
 }
 
 .text {
   font-family: var(--font-display);
-  font-size: var(--fs-h2);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-weight: 400;
   font-style: italic;
   color: var(--color-white);
-  line-height: 1.4;
-  position: relative;
-  z-index: 1;
+  line-height: 1.5;
 }
 
 .accent {
